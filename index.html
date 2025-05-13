@@ -96,8 +96,9 @@
     const message = document.getElementById("message");
     const title = document.getElementById("title");
 
-    // Establece la fecha objetivo a 30 segundos desde ahora
-    const targetDate = new Date().getTime() + 30 * 1000;
+    // Establece la fecha objetivo para hoy a las 12 de la noche
+    const now = new Date();
+    const targetDate = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0).getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
